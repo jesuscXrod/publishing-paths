@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Migrando a Firebase...</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; text-align: center; }
+    #status { font-size: 20px; font-weight: bold; color: #2563eb; }
+    #log { margin-top: 20px; text-align: left; background: #f3f4f6; padding: 20px; border-radius: 8px; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h1>Migrador de Datos a Firestore</h1>
+  <div id="status">Migrando... por favor espera.</div>
+  <div id="log"></div>
+
+  <!-- Cargamos la data original -->
+  <script src="./js/app-data.js"></script>
+  <!-- Cargamos el script de migración -->
+  <script type="module" src="./js/migrate.js"></script>
+</body>
+</html>

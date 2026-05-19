@@ -1,0 +1,116 @@
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publishing Paths</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <!-- PANTALLA DE LOGIN -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <h1>Publishing Paths</h1>
+      <p>Herramienta interna. Ingresa tus credenciales para acceder.</p>
+      <input type="email" id="emailInput" placeholder="Correo electrónico" class="input-login">
+      <input type="password" id="passwordInput" placeholder="Contraseña" class="input-login input-login-bottom">
+      <button id="loginBtn" class="primary btn-login">Iniciar sesión</button>
+      <div id="loginError" class="login-error" style="display: none;"></div>
+    </div>
+  </div>
+
+  <main class="container" id="appContainer" style="display: none;">
+    <div class="header-actions">
+      <div>
+        <h1>Publishing Paths</h1>
+        <p class="subtitle">
+          Genera texto plano para paths de publicación por marca, región y vehículo.
+        </p>
+      </div>
+      <button id="logoutBtn" class="danger btn-logout">Cerrar sesión</button>
+    </div>
+
+    <section class="panel">
+      <h2>Configuración general</h2>
+      <div class="grid">
+        <input id="authorBase" type="hidden" value="https://author-p154363-e1620826.adobeaemcloud.com">
+
+        <div class="field">
+          <label for="brandSelect">Brand</label>
+          <select id="brandSelect">
+            <option value="">Seleccionar brand...</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="regionSelect">Region</label>
+          <select id="regionSelect">
+            <option value="">Seleccionar region...</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Generar proyecto</h2>
+
+      <div class="grid">
+        <div class="field">
+          <label for="vehicleSelect">Vehículo</label>
+          <select id="vehicleSelect">
+            <option value="">Seleccionar vehículo...</option>
+          </select>
+        </div>
+
+        <input id="siteType" type="hidden" readonly="">
+
+        <div class="field">
+          <label for="year">Año</label>
+          <input id="year" type="text" placeholder="2026">
+        </div>
+
+        <input id="vehicleSlug" type="hidden" readonly="">
+      </div>
+
+      <hr class="separator">
+
+      <h3>Opcionales</h3>
+
+      <div class="options-grid">
+        <label class="option-card" for="includeInlineDisclosure">
+          <div class="option-copy">
+            <span class="option-title">Incluir Inline disclosure</span>
+            <span class="option-description">
+              Agrega el path de disclosures comunes al resultado generado.
+            </span>
+          </div>
+
+          <span class="switch">
+            <input id="includeInlineDisclosure" type="checkbox">
+            <span class="slider"></span>
+          </span>
+        </label>
+      </div>
+
+      <div class="actions actions-top">
+        <button id="generatePathsBtn" class="primary">Generar Paths</button>
+        <button id="clearFormBtn">Limpiar formulario</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="top-row">
+        <h2>Texto generado</h2>
+        <div class="actions no-margin">
+          <button id="copyCurrentBtn" class="primary">Copiar texto</button>
+          <button id="clearProjectsBtn" class="danger">Vaciar</button>
+        </div>
+      </div>
+
+      <textarea id="output" readonly="" spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="./js/app.js"></script>
+
+</body></html>
