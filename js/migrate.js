@@ -1,14 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBcuf-cqieniytKuEPnrrAlQ4jnW0YoFlQ",
-  authDomain: "publishing-path.firebaseapp.com",
-  projectId: "publishing-path",
-  storageBucket: "publishing-path.firebasestorage.app",
-  messagingSenderId: "967652547614",
-  appId: "1:967652547614:web:ed2fdd34069022f317e20f"
-};
+import { firebaseConfig } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

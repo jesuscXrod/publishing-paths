@@ -4,3 +4,9 @@ Thumbs.db
 
 # IDEs
 .vscode/
+
+# Firebase Configuration (Sensitive data)
+js/firebase-config.js
+
+# Local Utility Scripts
+check_db.js
